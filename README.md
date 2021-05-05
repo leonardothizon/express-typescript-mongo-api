@@ -20,27 +20,19 @@ The following stack was used in this project:
 # Install dependencies
 ```bash
 $ npm install
-```
 
 
 # Create .env file
-```bash
 $ touch .env
-```
 
 # Define application port and Mongo connection URL to .env file
-```bash
 PORT=3000
 MONGO_CONNECTION_STRING=mongodb://localhost:27017/test
-```
 
 # Run
-```bash
 $ npm run dev
-```
 
 # Test
-```bash
 $ npm run test
 ```
 
