@@ -12,6 +12,7 @@ The following stack was used in this project:
 - [Typescript](https://www.typescriptlang.org/)
 - [Express](https://expressjs.com/pt-br/)
 - [Mongoose](https://mongoosejs.com/)
+- [Pino](https://getpino.io/)
 - [Jest](https://jestjs.io/pt-BR/)
 
 ### 🎲 Setup

@@ -1,15 +1,8 @@
-const pine = require('pine');
+import pino from 'pino';
 
-const logger = pine();
+const LOG_LEVEL = process.env.LOG_LEVEL || 'debug';
 
-export class APILogger {
-  info(message: string, data?: any) {
-    logger.info(
-      `${message}   ${undefined != data ? JSON.stringify(data) : ''}`
-    );
-  }
-
-  error(message: any) {
-    logger.error(message);
-  }
-}
+export const logger = pino({
+  name: 'app-name',
+  level: LOG_LEVEL,
+});

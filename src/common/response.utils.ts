@@ -1,5 +1,5 @@
 import { Response } from 'express';
-import { APILogger } from '../logger/api.logger';
+import { logger } from '../logger/api.logger';
 
 enum response_status_codes {
   success = 200,
@@ -21,7 +21,6 @@ export function successResponse(message: string, DATA: any, res: Response) {
 }
 
 export function failureResponse(message: string, DATA: any, res: Response) {
-  const logger: APILogger = new APILogger();
   logger.error(message);
   res.status(response_status_codes.success).json({
     STATUS: 'FAILURE',
@@ -31,7 +30,7 @@ export function failureResponse(message: string, DATA: any, res: Response) {
 }
 
 export function insufficientParameters(res: Response) {
-  console.log('insufficientParameters');
+  logger.error('insufficientParameters');
   res.status(response_status_codes.bad_request).json({
     STATUS: 'FAILURE',
     MESSAGE: 'Insufficient parameters',
@@ -40,7 +39,6 @@ export function insufficientParameters(res: Response) {
 }
 
 export function mongoError(err: any): never {
-  const logger: APILogger = new APILogger();
   logger.error(err);
   throw {
     message: 'Database error',
