@@ -1,6 +1,6 @@
 
 <h1 align="center">
-    <a href="https://pt-br.reactjs.org/">Express Typescript Mongo API</a>
+    Express Typescript Mongo API
 </h1>
 <p align="center">🚀 This is a boilerpleate project that contains structure to create an API backend using Node.js</p>
 
