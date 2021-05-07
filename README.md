@@ -54,7 +54,7 @@ src\
 |--index.js        # App entry point
 ```
 
-### Autor
+### Author
 ---
 
 
